@@ -3,7 +3,7 @@ import { IllegalArgument } from "../../src/error/Error";
 
 const illegalArgPattern = /Illegal argument:/;
 
-describe( "IllegalArgument", () => {
+describe( "Error.IllegalArgument", () => {
 
   it( "should throw a runtime IllegalArgument exception when called", () => {
   

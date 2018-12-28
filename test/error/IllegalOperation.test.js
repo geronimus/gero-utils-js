@@ -3,7 +3,7 @@ import { IllegalOperation } from "../../src/error/Error";
 
 const illegalOpPattern = /Illegal operation:/;
 
-describe( "IllegalOperation", () => {
+describe( "Error.IllegalOperation", () => {
 
   it( "should throw a runtime IllegalOperation error when called", () => {
     
