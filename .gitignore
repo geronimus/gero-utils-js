@@ -1,3 +1,12 @@
+# OS cruft
+.DS_Store
+
+# VIM swap files
+*~
+
+# Distribution directory
+dist
+
 # Logs
 logs
 *.log
