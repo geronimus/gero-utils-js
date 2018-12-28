@@ -1,3 +1,6 @@
+# NPM Package-Lock (to be removed once development stabilizes)
+package-lock.json
+
 # OS cruft
 .DS_Store
 
