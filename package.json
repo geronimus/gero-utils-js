@@ -1,0 +1,27 @@
+{
+  "name": "gero-util",
+  "version": "0.1.0",
+  "description": "This is a library of functions that I consider generally useful in a JavaScrip / ECMAScript project.",
+  "main": "Utils.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geronimus/gero-utils-js.git"
+  },
+  "keywords": [
+    "util",
+    "utils",
+    "geronimus",
+    "Geronimus",
+    "gero",
+    "Gero"
+  ],
+  "author": "Graham Brown (Geronimus)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/geronimus/gero-utils-js/issues"
+  },
+  "homepage": "https://github.com/geronimus/gero-utils-js#readme"
+}
