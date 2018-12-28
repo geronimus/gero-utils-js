@@ -3,14 +3,14 @@ import { isNull } from "../../src/value/Value";
 
 describe( "Value.isNull( value )", () => {
 
-  it( `returns "true" for both "null" and "undefined" input`, () => {
+  it( "returns true for both null and undefined input", () => {
   
     assert( isNull( undefined ) );
     assert( isNull( null ) );
     assert( isNull() );
   });
 
-  it( `returns "false" for non-missing input (even if it's essentially empty)`, () => {
+  it( "returns false for non-missing input (even if it's essentially empty)", () => {
   
     const nonNullValues = [
       true,
