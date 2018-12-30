@@ -1,5 +1,5 @@
 {
-  "name": "gero-utils",
+  "name": "@geronimus/utils",
   "version": "0.1.0",
   "description": "This is a library of functions that I consider generally useful in a JavaScript / ECMAScript project.",
   "main": "Utils.js",
