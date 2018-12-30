@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve( __dirname, "dist" ),
     filename: "gero-utils.js",
-    library: "gero-utils",
+    library: "geroUtils",
     libraryTarget: "umd"
   },
   module: {
@@ -22,12 +22,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [ "env" ]  
+            rootMode: "upward"
           }
         }
       }
     ]
   },
-  target: "web"
 };
 
