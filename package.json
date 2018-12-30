@@ -4,8 +4,12 @@
   "description": "This is a library of functions that I consider generally useful in a JavaScript / ECMAScript project.",
   "main": "Utils.js",
   "scripts": {
+    "build": "npm-run-all --sequential clean compile publish-package",
+    "clean": "rimraf dist/*",
+    "compile": "webpack",
     "lint": "esw src",
     "lint:watch": "npm run lint -- --watch",
+    "publish-package": "node scripts/build/publish-artifacts.js",
     "test": "mocha --file ./scripts/test/setup.js --recursive",
     "test:watch": "npm run test -- --watch",
     "~test": "npm-run-all --parallel test:watch lint:watch"
