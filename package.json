@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "esw src",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --file ./env/test/setup.js --recursive",
+    "test": "mocha --file ./scripts/test/setup.js --recursive",
     "test:watch": "npm run test -- --watch",
     "~test": "npm-run-all --parallel test:watch lint:watch"
   },
