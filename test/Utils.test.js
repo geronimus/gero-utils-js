@@ -1,8 +1,6 @@
 import { assert } from "chai";
 import { Error, Logic, Value } from "../src/Utils";
 
-console.log( Error );
-
 describe( "Utils", () => {
 
   it( "contains the Error module", () => {
