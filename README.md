@@ -20,7 +20,7 @@ It is organized into modules, each containing functions:
 
 You can import each module on its own, or else import the default object from the gero-utils file, which will contain all of the modules and functions.
 
-Example:
+### Example:
 
 ```javascript
 import { Error } from "gero-utils";
