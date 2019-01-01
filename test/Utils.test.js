@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { Error, Logic, Value } from "../src/Utils";
+import { Error, Logic, Value, help } from "../src/Utils";
 
 describe( "Utils", () => {
 
@@ -18,5 +18,10 @@ describe( "Utils", () => {
     assert.isObject( Value );
     assert.isFunction( Value.isNull );
   });
+
+  it( "has a general help function", () => {
+    assert.isFunction( help );
+  });
 });
+
 

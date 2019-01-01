@@ -1,5 +1,6 @@
 import { assert } from "chai";
 import { when } from "../../src/logic/Logic";
+import { whenHelp } from "../../src/logic/help";
 
 const illegalArg = /Illegal argument:/;
 
@@ -44,6 +45,11 @@ describe( "Logic.when( condition, operation )", () => {
       max = Math.floor( max );
       return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
     }
+  });
+
+  it( "has a help text", () => {
+  
+    assert( /when/.test( whenHelp() ) );
   });
 });
 
