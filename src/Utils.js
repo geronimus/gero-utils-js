@@ -2,7 +2,6 @@ import * as Error from "./error/Error";
 import * as Logic from "./logic/Logic";
 import * as Value from "./value/Value";
 import {
-  generalHelp,
   getHelpItemText,
   isModule,
   listModuleMembers,
