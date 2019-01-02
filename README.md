@@ -57,3 +57,37 @@ Or like this:
 Utils.help( "Error.IllegalArgument" );
 ```
 
+## API
+
+### Error.IllegalArgument( param, expected, actual )
+
+Throws a runtime exception with a message explaining that an illegal argument was provided to ___param___.
+
+- __param : string__ The name of the parameter where the illegal value was encountered.
+- __expected : string__ A description of the allowed values.
+- __actual : string__ A description or representation of the value encountered.
+
+### Error.IllegalOperation( methodCalled, rule, whatYouDidWrong )
+
+Throws a runtime exception with a message explaining that the user or process attempted an illegal operation.
+
+- __methodCalled : string__ The name of the illegal method, as fully-scoped as possible.
+- __rule: string__ A description of when this method is allowed or not allowed.
+- __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
+
+
+### Logic.when( condition, operation )
+
+Executes a function passed into ___operation___, and returns its value, if (and only if) the ___condition___
+evaluates to true.
+
+- __condition : boolean__ Any expression that evaluates to a boolean (true or false) value.
+- __operation : function__ A function expression or reference that will be called, if the condition is true. It may or may not return a value.
+
+### Value.isNull( value )
+
+Determines whether of not the passed-in value evaluates to one of JavaScript's bottom values: undefined or null.
+Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
+
+- __value : Any__ The value to check for strict equality with either undefined or null.
+

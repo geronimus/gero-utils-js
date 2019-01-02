@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/utils",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This is a library of functions that I consider generally useful in a JavaScript / ECMAScript project.",
   "main": "./src/Utils.js",
   "scripts": {
