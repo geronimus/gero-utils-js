@@ -72,7 +72,7 @@ Throws a runtime exception with a message explaining that an illegal argument wa
 Throws a runtime exception with a message explaining that the user or process attempted an illegal operation.
 
 - __methodCalled : string__ The name of the illegal method, as fully-scoped as possible.
-- __rule: string__ A description of when this method is allowed or not allowed.
+- __rule : string__ A description of when this method is allowed or not allowed.
 - __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
 
 
@@ -86,8 +86,8 @@ evaluates to true.
 
 ### Value.isNull( value )
 
-Determines whether of not the passed-in value evaluates to one of JavaScript's bottom values: undefined or null.
+Determines whether of not the passed-in value evaluates to one of JavaScript's bottom values: ___undefined___ or ___null___.
 Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
 
-- __value : Any__ The value to check for strict equality with either undefined or null.
+- __value : Any__ The value to check for strict equality with either ___undefined___ or ___null___.
 
