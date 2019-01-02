@@ -24,13 +24,13 @@ You can import each module on its own, or else import the default object from th
 
 Example:
 
-  import { Error } from "gero-utils";
+  import { Error } from "@geronimus/utils";
   
   Error.IllegalArgument( "myParam", "A valid value", myParam );
 
 Or:
 
-  import Utils from "gero-utils";
+  import Utils from "@geronimus/utils";
   
   Utils.Error.IllegalArgument( "myParam", "A valid value", myParam );
   

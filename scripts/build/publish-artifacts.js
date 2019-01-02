@@ -7,25 +7,28 @@ const targetPath = path.resolve( __dirname, "../../dist/" );
 copyToTarget( sourcePath, "LICENCE", targetPath );
 copyToTarget( sourcePath, "README.md", targetPath );
 
-const sourceObj = JSON.parse(
+const sourcePackageObj = JSON.parse(
   fs.readFileSync(
     path.resolve( sourcePath, "package.json" )
   )
 );
 
-const publishedProperties = Object.getOwnPropertyNames( sourceObj ).filter(
-  prop => prop !== "devDependencies" && prop !== "scripts"
-);
+const publishedProperties = Object.getOwnPropertyNames( sourcePackageObj )
+  .filter(
+    prop => prop !== "devDependencies" && prop !== "scripts"
+  );
 
-const targetObj = {};
+const targetPackageObj = {};
 
 publishedProperties.forEach( prop => {
-  targetObj[ prop ] = sourceObj[ prop ];
+  targetPackageObj[ prop ] = sourcePackageObj[ prop ];
 });
+
+targetPackageObj.main = "./utils.js";
 
 fs.writeFileSync(
   path.resolve( targetPath, "package.json" ),
-  JSON.stringify( targetObj, null, 2 )
+  JSON.stringify( targetPackageObj, null, 2 )
 );
 
 function copyToTarget( sourceDir, fileName, targetDir ) {

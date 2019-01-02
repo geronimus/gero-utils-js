@@ -23,7 +23,7 @@ You can import each module on its own, or else import the default object from th
 ### Example:
 
 ```javascript
-import { Error } from "gero-utils";
+import { Error } from "@geronimus/utils";
 ```
   
 ```javascript
@@ -33,7 +33,7 @@ Error.IllegalArgument( "myParam", "A valid value", myParam );
 Or:
 
 ```javascript
-import Utils from "gero-utils";
+import Utils from "@geronimus/utils";
   
 Utils.Error.IllegalArgument( "myParam", "A valid value", myParam );
 ```

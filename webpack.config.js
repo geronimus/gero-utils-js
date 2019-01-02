@@ -5,8 +5,9 @@ module.exports = {
   entry: "./src/Utils.js",
   output: {
     path: path.resolve( __dirname, "dist" ),
-    filename: "gero-utils.js",
-    library: "geroUtils",
+    filename: "utils.js",
+    globalObject: "this",
+    library: "@geronimus/utils",
     libraryTarget: "umd"
   },
   module: {
