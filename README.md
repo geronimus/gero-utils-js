@@ -16,6 +16,7 @@ It is organized into modules, each containing functions:
     - when
 
 - Value (module)
+    - isNonEmptyString
     - isNull
 
 You can import each module on its own, or else import the default object from the gero-utils file, which will contain all of the modules and functions.
@@ -87,6 +88,13 @@ evaluates to true.
 
 - __condition : boolean__ Any expression that evaluates to a boolean (true or false) value.
 - __operation : function__ A function expression or reference that will be called, if the condition is true. It may or may not return a value.
+
+### Value.isNonEmptyString( value )
+
+Determines whether or not the passed-in value evaluates to a string longer than zero characters.
+Strings composed exclusively of white space characters are rejected.
+
+- __value : Any__ The value to check for strict equa`lity with a non-empty string.
 
 ### Value.isNull( value )
 
