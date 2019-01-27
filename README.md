@@ -100,7 +100,7 @@ Determines whether or not the passed-in value evaluates to a non-zero-length str
 Determines whether or not the passed-in value evaluates to a string longer than zero characters.
 Strings composed exclusively of white space characters are rejected.
 
-- __value : Any__ The value to check for strict equa`lity with a non-empty string.
+- __value : Any__ The value to check for strict equality with a non-empty string.
 
 ### Value.isNull( value ) : boolean
 
