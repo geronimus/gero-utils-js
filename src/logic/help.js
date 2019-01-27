@@ -1,7 +1,7 @@
 function whenHelp() {
 
   return `
-when( condition, operation )
+when( condition, operation ) : Any
 
   Executes a function passed into "operation", and returns its value, if (and only if) the "condition"
   evaluates to true.
