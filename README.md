@@ -89,14 +89,20 @@ evaluates to true.
 - __condition : boolean__ Any expression that evaluates to a boolean (true or false) value.
 - __operation : function__ A function expression or reference that will be called, if the condition is true. It may or may not return a value.
 
-### Value.isNonEmptyString( value )
+### Value.isAtomicString( value ) : boolean
+
+Determines whether or not the passed-in value evaluates to a non-zero-length string with no white space characters at all.
+
+- __value : Any__ The value to check for strict equality with a non-empty, atomic string.
+
+### Value.isNonEmptyString( value ) : boolean
 
 Determines whether or not the passed-in value evaluates to a string longer than zero characters.
 Strings composed exclusively of white space characters are rejected.
 
 - __value : Any__ The value to check for strict equa`lity with a non-empty string.
 
-### Value.isNull( value )
+### Value.isNull( value ) : boolean
 
 Determines whether or not the passed-in value evaluates to one of JavaScript's bottom values: ___undefined___ or ___null___.
 Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
