@@ -63,6 +63,8 @@ Utils.help( "Error.IllegalArgument" );
 
 Throws a runtime exception with a message explaining that an illegal argument was provided to ___param___.
 
+The first words of the error message will always be: "Illegal argument" (For the purposes of pattern matching in tests.)
+
 - __param : string__ The name of the parameter where the illegal value was encountered.
 - __expected : string__ A description of the allowed values.
 - __actual : string__ A description or representation of the value encountered.
@@ -70,6 +72,8 @@ Throws a runtime exception with a message explaining that an illegal argument wa
 ### Error.IllegalOperation( methodCalled, rule, whatYouDidWrong )
 
 Throws a runtime exception with a message explaining that the user or process attempted an illegal operation.
+
+The first words of the error message will always be: "Illegal operation" (For the purposes of pattern matching in tests.)
 
 - __methodCalled : string__ The name of the illegal method, as fully-scoped as possible.
 - __rule : string__ A description of when this method is allowed or not allowed.
@@ -86,7 +90,7 @@ evaluates to true.
 
 ### Value.isNull( value )
 
-Determines whether of not the passed-in value evaluates to one of JavaScript's bottom values: ___undefined___ or ___null___.
+Determines whether or not the passed-in value evaluates to one of JavaScript's bottom values: ___undefined___ or ___null___.
 Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
 
 - __value : Any__ The value to check for strict equality with either ___undefined___ or ___null___.
