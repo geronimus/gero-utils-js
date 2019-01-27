@@ -60,7 +60,7 @@ Utils.help( "Error.IllegalArgument" );
 
 ## API
 
-### Error.IllegalArgument( param, expected, actual )
+### Error.IllegalArgument( param, expected, actual ) : void
 
 Throws a runtime exception with a message explaining that an illegal argument was provided to ___param___.
 
@@ -70,7 +70,7 @@ The first words of the error message will always be: "Illegal argument" (For the
 - __expected : string__ A description of the allowed values.
 - __actual : string__ A description or representation of the value encountered.
 
-### Error.IllegalOperation( methodCalled, rule, whatYouDidWrong )
+### Error.IllegalOperation( methodCalled, rule, whatYouDidWrong ) : void
 
 Throws a runtime exception with a message explaining that the user or process attempted an illegal operation.
 
@@ -81,7 +81,7 @@ The first words of the error message will always be: "Illegal operation" (For th
 - __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
 
 
-### Logic.when( condition, operation )
+### Logic.when( condition, operation ) : Any
 
 Executes a function passed into ___operation___, and returns its value, if (and only if) the ___condition___
 evaluates to true.
