@@ -1,12 +1,13 @@
 import Utils from "./Utils";
 import { IllegalArgumentHelp, IllegalOperationHelp } from "./error/help";
 import { whenHelp } from "./logic/help";
-import { isNullHelp } from "./value/help";
+import { isNonEmptyStringHelp, isNullHelp } from "./value/help";
 
 const helpMapping = {
   IllegalArgument: IllegalArgumentHelp(),
   IllegalOperation: IllegalOperationHelp(),
   when: whenHelp(),
+  isNonEmptyString: isNonEmptyStringHelp(),
   isNull: isNullHelp()
 };
 
