@@ -1,7 +1,18 @@
+function isAtomicStringHelp() {
+
+  return `
+isAtomicString( value ) : boolean
+
+  Determines whether or not the passed-in value evaluates to a non-zero-length string with no white space characters at all.
+
+  value : Any -> The value to check for strict equality with a non-empty, atomic string.
+`;
+}
+
 function isNonEmptyStringHelp() {
 
   return `
-isNonEmptyString( value )
+isNonEmptyString( value ) : boolean
 
   Determines whether or not the passed-in value evaluates to a string longer than zero characters.
   
@@ -14,7 +25,7 @@ isNonEmptyString( value )
 function isNullHelp() {
 
   return `
-isNull( value )
+isNull( value ) : boolean
 
   Determines whether or not the passed-in value evaluates to one of JavaScript's bottom values: undefined or null.
   Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
@@ -24,6 +35,7 @@ isNull( value )
 }
 
 export { 
+  isAtomicStringHelp,
   isNonEmptyStringHelp,
   isNullHelp
 };

@@ -1,3 +1,8 @@
+function isAtomicString( value ) {
+  return isNonEmptyString( value ) &&
+    !/\s/.test( value );
+}
+
 function isNonEmptyString( value ) {
   return !isNull( value ) &&
     typeof value === "string" &&
@@ -11,6 +16,7 @@ function isNull( value ) {
 }
 
 export {
+  isAtomicString,
   isNonEmptyString,
   isNull
 };
