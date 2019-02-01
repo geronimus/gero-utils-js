@@ -1,7 +1,14 @@
 import Utils from "./Utils";
 import { IllegalArgumentHelp, IllegalOperationHelp } from "./error/help";
 import { whenHelp } from "./logic/help";
-import { isAtomicStringHelp, isNonEmptyStringHelp, isNullHelp } from "./value/help";
+import {
+  isAtomicStringHelp,
+  isNonEmptyStringHelp,
+  isNullHelp,
+  randomIntHelp,
+  rangeHelp,
+  uuidHelp
+} from "./value/help";
 
 const helpMapping = {
   IllegalArgument: IllegalArgumentHelp(),
@@ -9,7 +16,10 @@ const helpMapping = {
   when: whenHelp(),
   isAtomicString: isAtomicStringHelp(),
   isNonEmptyString: isNonEmptyStringHelp(),
-  isNull: isNullHelp()
+  isNull: isNullHelp(),
+  randomInt: randomIntHelp(),
+  range: rangeHelp(),
+  uuid: uuidHelp()
 };
 
 function generalHelp() {

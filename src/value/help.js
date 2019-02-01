@@ -34,9 +34,60 @@ isNull( value ) : boolean
   `;
 }
 
+function randomIntHelp() {
+
+  return `
+randomInt( upperBound ) : number
+
+  Returns a random integer between 0 and the value supplied to upperBound.
+
+  upperBound : number -> The highest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
+
+
+randomInt( lowerBound, upperBound ) : number
+
+  Returns a random integer between lowerBound and upperBound (inclusive).
+
+  NOTE: Uses Math.random() under the hood and is there NOT cryptographically secure.
+
+  lowerBound : number -> The lowest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
+  upperBound : number -> The highest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
+`;
+}
+
+function rangeHelp() {
+
+  return `
+range( upperBound ) : number
+
+  Returns an array containing the integers from 1 until the argument provided to upperBound.
+
+  upperBound : number -> The highest number (inclusive) in the returned range. (Whatever number is supplied will be interpreted as an integer.)
+
+range( lowerBound, upperBound ) : number
+
+  Returns an array containing the integers from lowerBound until  upperBound.
+
+  lowerBound : number -> The lowest number (inclusive) in the returned range. (Whatever number is supplied will be interpreted as an integer.)
+  upperBound : number -> The highest number (inclusive) in the returned range. (Whatever number is supplied will be interpreted as an integer.)
+`;
+}
+
+function uuidHelp() {
+
+  return `
+uuid() : string
+
+  Returns the canonical string representation of a version 4 (random) uuid (per IETF RFC 4122).
+`;
+}
+
 export { 
   isAtomicStringHelp,
   isNonEmptyStringHelp,
-  isNullHelp
+  isNullHelp,
+  randomIntHelp,
+  rangeHelp,
+  uuidHelp
 };
 
