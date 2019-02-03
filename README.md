@@ -6,14 +6,14 @@ Geronimus Utilities for JavaScript (gero-utils.js) are functions I find myself r
 
 The collection is expected to grow over time.
 
-# Error Functions
+## Error Functions
     - IllegalArgument
     - IllegalOperation
 
-# Logic
+## Logic Functions
     - when
 
-# Value
+## Value Functions
     - isNonEmptyString
     - isNull
     - randomInt
