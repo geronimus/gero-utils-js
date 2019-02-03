@@ -1,4 +1,3 @@
-import Utils from "./Utils";
 import { IllegalArgumentHelp, IllegalOperationHelp } from "./error/help";
 import { whenHelp } from "./logic/help";
 import {
@@ -9,6 +8,9 @@ import {
   rangeHelp,
   uuidHelp
 } from "./value/help";
+import * as Error from "./error/Error";
+import * as Logic from "./logic/Logic";
+import * as Value from "./value/Value";
 
 const helpMapping = {
   IllegalArgument: IllegalArgumentHelp(),
@@ -29,126 +31,53 @@ Geronimus Utilities for JavaScript (gero-utils.js) are functions I find myself r
 
 The collection is expected to grow over time.
 
-It is organized into modules, each containing functions:
-${ mapModules() }
-
-You can import each module on its own, or else import the default object from the gero-utils file, which will contain all of the modules and functions.
-
-Example:
-
-  import { Error } from "@geronimus/utils";
-  
-  Error.IllegalArgument( "myParam", "A valid value", myParam );
-
-Or:
+You can list the available functions by calling:
 
   import Utils from "@geronimus/utils";
+
+  Utils.listFunctions();
+
+You can get help with a specific function by calling:
+
+  Utils.help( functionName );
+
+You can import each function by name, like this:
+
+  import { IllegalArgument } from "@geronimus/utils";
   
-  Utils.Error.IllegalArgument( "myParam", "A valid value", myParam );
-  
-
-To list the available functions in each category, call help this way:
-
-  Utils.help( "Error" );
-  
-To show help for a specific function, call help like this:
-
-  Utils.help( "IllegalArgument" );
-  
-Or like this:
-
-  Utils.help( "Error.IllegalArgument" );
-  `;
-}
-
-function moduleHelpText( module, members ) {
-  return `
-${ module } contains help for the following functions:
-
-${ members.map( item => "  - " + item ).join( "\n" ) }
-
-To display the help for a function, simply call help like this:
-
-  Utils.help( "${ members[0] }" );
-
-Or like this:
-
-  Utils.help( "${ module }.${ members[0] }" );
+  IllegalArgument( "myParam", "A valid value", myParam );
   `;
 }
 
 function getHelpItemText( item ) {
-  if ( qualifiedFunctions().includes( item ) ) {
-    return helpMapping[ stripQualifier( item ) ];  
-  } else if ( bareFunctions().includes( item ) ) {
-    return helpMapping[ item ];
+
+  if ( listFunctions().includes( item ) ) {
+    return helpMapping[ item ];  
   } else {
     return generalHelp();  
   }
 }
 
-function isModule( name ) {
-  return listModuleMembers( Utils ).includes( name );    
-}
+function listFunctions() {
 
-function listModuleMembers( obj ) {
-  return Object.getOwnPropertyNames( obj )
-    .filter( item => item !== "__esModule" )
-    .filter( item => item !== "help" )
-    .sort();
-}
+  const defaultModuleMembers = [
+    "__esModule",
+    "help",
+    "length",
+    "name",
+    "prototype"
+  ];
 
-function mapModules() {
-  return Object.getOwnPropertyNames( Utils )
-    .filter( item => item !== "help" )
-    .sort()
-    .map(
-      module => {
-        return [ "", `  - ${ module } (module)` ].concat(
-          Object.getOwnPropertyNames( Utils[ module ] )
-            .filter( item => item !== "__esModule"  )
-            .sort()
-            .map( item => `    - ${ item }` )
-        );
-      }
-    )
-    .reduce( ( acc, val ) => { return acc.concat( val ); } )
-    .join( "\n" );
-}
-
-function qualifiedFunctions() {
-  const modules = listModuleMembers( Utils );
-  
-  return modules.map(
-    module => {
-      return listModuleMembers( Utils[ module ] )
-        .map( item => `${ module }.${ item }` );
-    }
-  ).reduce(
-    ( acc, coll ) => { return acc.concat( coll ); },
-    []
-  );
-}
-
-function stripQualifier( input ) {
-  return input.slice( input.indexOf( "." ) + 1 );  
-}
-
-function bareFunctions() {
-  return qualifiedFunctions().map(
-    item =>stripQualifier( item )
-  );  
+  return Object.getOwnPropertyNames( Error )
+    .concat( Object.getOwnPropertyNames( Logic ) )
+    .concat( Object.getOwnPropertyNames( Value ) )
+    .filter( ( item ) => !defaultModuleMembers.includes( item ) );
 }
 
 export {
-  bareFunctions,
   generalHelp,
   getHelpItemText,
   helpMapping,
-  isModule,
-  listModuleMembers,
-  moduleHelpText,
-  qualifiedFunctions,
-  stripQualifier
+  listFunctions,
 };
 

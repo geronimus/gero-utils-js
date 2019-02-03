@@ -1,22 +1,37 @@
 import { assert } from "chai";
-import { Error, Logic, Value, help } from "../src/Utils";
+import {
+  IllegalArgument,
+  IllegalOperation
+} from "../src/error/Error";
+import { when } from "../src/logic/Logic";
+import {
+  isNull,
+  isAtomicString,
+  isNonEmptyString,
+  randomInt,
+  range,
+  uuid
+} from "../src/value/Value";
+import { help } from "../src/Utils";
 
 describe( "Utils", () => {
 
   it( "contains the Error module", () => {
-    assert.isObject( Error );
-    assert.isFunction( Error.IllegalArgument );
-    assert.isFunction( Error.IllegalOperation );
+    assert.isFunction( IllegalArgument );
+    assert.isFunction( IllegalOperation );
   });
 
   it( "contains the Logic module", () => {
-    assert.isObject( Logic );
-    assert.isFunction( Logic.when );
+    assert.isFunction( when );
   });
 
   it( "contains the Value module", () => {
-    assert.isObject( Value );
-    assert.isFunction( Value.isNull );
+    assert.isFunction( isNull );
+    assert.isFunction( isAtomicString );
+    assert.isFunction( isNonEmptyString );
+    assert.isFunction( randomInt );
+    assert.isFunction( range );
+    assert.isFunction( uuid );
   });
 
   it( "has a general help function", () => {
