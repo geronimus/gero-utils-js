@@ -8,7 +8,7 @@ import {
   range,
   uuid
 } from "./value/Value";
-import { getHelpItemText } from "./help";  
+import { getHelpItemText, listFunctions } from "./help";  
 
 function help( withWhat ) {
 
@@ -25,7 +25,8 @@ export default {
   range,
   uuid,
   when,
-  help
+  help,
+  listFunctions
 };
 export {  
   IllegalArgument,
@@ -37,6 +38,7 @@ export {
   range,
   uuid,
   when,
-  help
+  help,
+  listFunctions
 };
 
