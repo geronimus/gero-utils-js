@@ -48,7 +48,7 @@ randomInt( lowerBound, upperBound ) : number
 
   Returns a random integer between lowerBound and upperBound (inclusive).
 
-  NOTE: Uses Math.random() under the hood and is there NOT cryptographically secure.
+  NOTE: Uses Math.random() under the hood and is therefore NOT cryptographically secure.
 
   lowerBound : number -> The lowest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
   upperBound : number -> The highest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
