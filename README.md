@@ -110,7 +110,7 @@ NOTE: Uses `Math.random()` under the hood and is therefore ___NOT___ cryptograph
 
 - __upperBound : number__ The highest number (inclusive) that can be returned. (Whatever number is supplied will be interpreted as an integer.)
 
-### randomInt( lowerBound, upperBount ) : number
+### randomInt( lowerBound, upperBound ) : number
 
 Returns a random integer between lowerBound and upperBound (inclusive).
 
