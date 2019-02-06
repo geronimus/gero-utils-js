@@ -8,9 +8,9 @@ import {
   rangeHelp,
   uuidHelp
 } from "./value/help";
-import * as Error from "./error/Error";
-import * as Logic from "./logic/Logic";
-import * as Value from "./value/Value";
+import * as Error from "./Error";
+import * as Logic from "./Logic";
+import * as Value from "./Value";
 
 const helpMapping = {
   IllegalArgument: IllegalArgumentHelp(),

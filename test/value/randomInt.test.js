@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { randomInt, range } from "../../src/value/Value";
+import { randomInt, range } from "../../src/Value";
 import { randomIntHelp } from "../../src/value/help";
 
 describe( "Value.randomInt( lowerBound, upperBound )", () => {

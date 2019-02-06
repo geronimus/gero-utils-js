@@ -1,4 +1,4 @@
-import { IllegalArgument } from "../../src/error/Error";
+import { IllegalArgument } from "./Error";
 
 function when( condition, operation ) {
   

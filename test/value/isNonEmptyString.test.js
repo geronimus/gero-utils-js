@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { isNonEmptyString } from "../../src/value/Value";
+import { isNonEmptyString } from "../../src/Value";
 import { isNonEmptyStringHelp } from "../../src/value/help";
 
 describe( "Value.isNonEmptyString( value )", () => {

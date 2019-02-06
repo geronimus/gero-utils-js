@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { isAtomicString } from "../../src/value/Value";
+import { isAtomicString } from "../../src/Value";
 import { isAtomicStringHelp } from "../../src/value/help";
 
 describe( "Value.isAtomicString( value )", () => {

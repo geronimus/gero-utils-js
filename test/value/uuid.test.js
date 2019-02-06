@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { range, uuid } from "../../src/value/Value";
+import { range, uuid } from "../../src/Value";
 import { uuidHelp } from "../../src/value/help";
 
 describe( "Value.uuid()", () => {

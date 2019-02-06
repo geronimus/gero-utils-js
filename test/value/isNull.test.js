@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { isNull } from "../../src/value/Value";
+import { isNull } from "../../src/Value";
 import { isNullHelp } from "../../src/value/help";
 
 describe( "Value.isNull( value )", () => {

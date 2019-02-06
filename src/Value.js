@@ -1,4 +1,4 @@
-import { IllegalArgument, IllegalOperation } from "../../src/error/Error";
+import { IllegalArgument, IllegalOperation } from "./Error";
 
 function isAtomicString( value ) {
   return isNonEmptyString( value ) &&

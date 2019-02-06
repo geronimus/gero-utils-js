@@ -2,8 +2,8 @@ import { assert } from "chai";
 import {
   IllegalArgument,
   IllegalOperation
-} from "../src/error/Error";
-import { when } from "../src/logic/Logic";
+} from "../src/Error";
+import { when } from "../src/Logic";
 import {
   isNull,
   isAtomicString,
@@ -11,7 +11,7 @@ import {
   randomInt,
   range,
   uuid
-} from "../src/value/Value";
+} from "../src/Value";
 import { help } from "../src/Utils";
 
 describe( "Utils", () => {

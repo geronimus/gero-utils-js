@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { when } from "../../src/logic/Logic";
+import { when } from "../../src/Logic";
 import { whenHelp } from "../../src/logic/help";
 
 const illegalArg = /Illegal argument:/;

@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { range } from "../../src/value/Value";
+import { range } from "../../src/Value";
 import { rangeHelp } from "../../src/value/help";
 
 const nonNumericArgs = [

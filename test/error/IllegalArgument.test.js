@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { IllegalArgument } from "../../src/error/Error";
+import { IllegalArgument } from "../../src/Error";
 import { IllegalArgumentHelp } from "../../src/error/help";
 
 const illegalArgPattern = /Illegal argument:/;

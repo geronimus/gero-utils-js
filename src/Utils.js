@@ -1,5 +1,5 @@
-import { IllegalArgument, IllegalOperation } from "./error/Error";
-import { when } from "./logic/Logic";
+import { IllegalArgument, IllegalOperation } from "./Error";
+import { when } from "./Logic";
 import {
   isAtomicString,
   isNonEmptyString,
@@ -7,7 +7,7 @@ import {
   randomInt,
   range,
   uuid
-} from "./value/Value";
+} from "./Value";
 import { getHelpItemText, listFunctions } from "./help";  
 
 function help( withWhat ) {

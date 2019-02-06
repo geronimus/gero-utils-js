@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { IllegalOperation } from "../../src/error/Error";
+import { IllegalOperation } from "../../src/Error";
 import { IllegalOperationHelp } from "../../src/error/help";
 
 const illegalOpPattern = /Illegal operation:/;
