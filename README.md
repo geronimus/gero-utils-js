@@ -98,17 +98,6 @@ The first words of the error message will always be: "Illegal operation" (For th
 - __rule : string__ A description of when this method is allowed or not allowed.
 - __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
 
-
-## Logic
-
-### when( condition, operation ) : Any
-
-Executes a function passed into ___operation___, and returns its value, if (and only if) the ___condition___
-evaluates to true.
-
-- __condition : boolean__ Any expression that evaluates to a boolean (true or false) value.
-- __operation : function__ A function expression or reference that will be called, if the condition is true. It may or may not return a value.
-
 ## Value
 
 ### isAtomicString( value ) : boolean

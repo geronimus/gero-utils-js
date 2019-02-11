@@ -1,42 +1,21 @@
 import { assert } from "chai";
-import {
-  IllegalArgument,
-  IllegalOperation
-} from "../src/Error";
-import { when } from "../src/Logic";
-import {
-  isNull,
-  isAtomicString,
-  isNonEmptyString,
-  randomInt,
-  range,
-  uuid
-} from "../src/Value";
+import * as Collection from "../src/Collection";
+import * as Error from "../src/Error";
+import * as Value from "../src/Value";
 import { help } from "../src/Utils";
 
 describe( "Utils", () => {
 
-  it( "contains the Error module", () => {
-    assert.isFunction( IllegalArgument );
-    assert.isFunction( IllegalOperation );
-  });
-
-  it( "contains the Logic module", () => {
-    assert.isFunction( when );
-  });
-
-  it( "contains the Value module", () => {
-    assert.isFunction( isNull );
-    assert.isFunction( isAtomicString );
-    assert.isFunction( isNonEmptyString );
-    assert.isFunction( randomInt );
-    assert.isFunction( range );
-    assert.isFunction( uuid );
-  });
-
-  it( "has a general help function", () => {
-    assert.isFunction( help );
+  it( "contains all exported functions from all modules", () => {
+    Object.keys( Collection ).map( key => Collection[ key ] )
+      .concat( Object.keys( Error ).map( key => Error[ key ] ) )
+      .concat( Object.keys( Value ).map( key => Value[ key ] ) )
+      .concat( [ help ] )
+      .forEach( item => { assertIsFunction( item ); } );
   });
 });
 
+function assertIsFunction( functionRef ) {
+  assert.isFunction( functionRef );  
+}
 

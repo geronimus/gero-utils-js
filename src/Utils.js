@@ -1,9 +1,11 @@
+import { head, last, splitList, tail } from "./Collection";
 import { IllegalArgument, IllegalOperation } from "./Error";
-import { when } from "./Logic";
 import {
   isAtomicString,
   isNonEmptyString,
   isNull,
+  isPrimitive,
+  quacksLike,
   randomInt,
   range,
   uuid
@@ -16,28 +18,38 @@ function help( withWhat ) {
 }
 
 export default { 
+  head,
+  last,
+  splitList,
+  tail,
   IllegalArgument,
   IllegalOperation,
   isAtomicString,
   isNonEmptyString,
   isNull,
+  isPrimitive,
+  quacksLike,
   randomInt,
   range,
   uuid,
-  when,
   help,
   listFunctions
 };
 export {  
+  head,
+  last,
+  splitList,
+  tail,
   IllegalArgument,
   IllegalOperation,
   isAtomicString,
   isNonEmptyString,
   isNull,
+  isPrimitive,
+  quacksLike,
   randomInt,
   range,
   uuid,
-  when,
   help,
   listFunctions
 };
