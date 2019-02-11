@@ -62,6 +62,7 @@ quacksLike( subject, duck ) : object
       result: false,
       matchedProperties: [ "beak", "feathers" ],
       unmatchedProperties: [ "quack", "webbedFeet" ]
+      additionalProperties: [ "wattle", "crow" ],
       subjectDataType: "object",
       duckDataType: "object"
     }

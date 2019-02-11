@@ -47,6 +47,35 @@ Utils.help( "IllegalArgument" );
   
 # API
 
+## Collection
+
+### head( array ) : Any
+
+Returns the first element of an Array.
+
+- __array : Array[Any]__ The array from which you want the first element.
+
+### last( array ) : Any
+
+Returns the final element of an Array.
+
+- __array : Array[Any]__ The array from which you want the final element.
+
+### splitList( sliceSize, array ) : Array
+
+Splits an array into an array of arrays. The sub-arrays are of the length specified by sliceSize.
+
+The returned array is a copy. The orginal is untouched.
+
+- __sliceSize : number__ The maximum size of a sub-array. Will be interpreted as an integer.
+- __array : Array[Any]__ The array to be sliced into sub-arrays.
+
+### tail( array ) : Array[Any]
+
+Returns all of the elements of the array that follow its first element.
+
+- __array: Array[Any]__ The array from which you want all of the elements following the first.
+
 ## Error
 
 ### IllegalArgument( param, expected, actual ) : void
@@ -101,6 +130,36 @@ Determines whether or not the passed-in value evaluates to one of JavaScript's b
 Makes it unnecessary to check for both bottom values. Does not get tricked by other "falsy" values.
 
 - __value : Any__ The value to check for strict equality with either ___undefined___ or ___null___.
+
+### isPrimitive( value ) : boolean
+
+Determines whether the passed-in value is one of JavaScript's primitive types. ( "boolean", "number", "string", "undefined", "null" )
+
+Otherwise, presume it is a complex type. (eg, An "object" or "function". )
+
+- __value : Any__ The value whose type you want to know.
+
+### quacksLike( subject, duck ) : object
+
+(As in "duck typing".) Determines whether the "subject" is an object like the "duck", by examining their properties.
+
+It doesn't examine the "duck's" property values, so it can be a real object, or just an interface definition.
+
+Returns a result object that reports on the matched and unmatched properties. eg:
+
+```javascript
+    {
+      result: false,
+      matchedProperties: [ "beak", "feathers" ],
+      unmatchedProperties: [ "quack", "webbedFeet" ]
+      additionalProperties: [ "wattle", "crow" ],
+      subjectDataType: "object",
+      duckDataType: "object"
+    }
+```
+
+- __subject : Any__ The value to test as having the same properties as the "duck".
+- __duck : Any__ An object whose property names you expect the subject to have. If you pass in a primitive value, the function will verify that the subject is of the same primitive type.
 
 ### randomInt( upperBound ) : number
 

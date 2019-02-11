@@ -20,17 +20,6 @@ last( array ) : Any
   `;
 }
 
-function tailHelp() {
-
-  return `
-tail( array ) : Array[Any]
-
-  Returns all of the elements of the array that follow its first element.
-
-  array: Array[Any] -> The array from which you want all of the elements following the first.
-  `;
-}
-
 function splitListHelp() {
   
   return `
@@ -42,6 +31,17 @@ splitList( sliceSize, array ) : Array
 
   sliceSize : number -> The maximum size of a sub-array. Will be interpreted as an integer.
   array : Array[Any] -> The array to be sliced into sub-arrays.
+  `;
+}
+
+function tailHelp() {
+
+  return `
+tail( array ) : Array[Any]
+
+  Returns all of the elements of the array that follow its first element.
+
+  array: Array[Any] -> The array from which you want all of the elements following the first.
   `;
 }
 
