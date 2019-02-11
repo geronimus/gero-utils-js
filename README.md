@@ -6,19 +6,25 @@ Geronimus Utilities for JavaScript (gero-utils.js) are functions I find myself r
 
 The collection is expected to grow over time.
 
-## Error Functions
-    - IllegalArgument
-    - IllegalOperation
+## Collection
+- head
+- last
+- splitList
+- tail
 
-## Logic Functions
-    - when
+## Error Functions
+- IllegalArgument
+- IllegalOperation
 
 ## Value Functions
-    - isNonEmptyString
-    - isNull
-    - randomInt
-    - range
-    - uuid
+- isAtomicString
+- isNonEmptyString
+- isNull
+- isPrimitive
+- quacksLike
+- randomInt
+- range
+- uuid
 
 You can import each function on its own, or else import the default object from the gero-utils file, which will contain all of the functions.
 
