@@ -1,3 +1,36 @@
+function headHelp() {
+  
+  return `
+head( array ) : Any
+
+  Returns the first element of an Array.
+
+  array : Array[Any] -> The array from which you want the first element.
+  `;
+}
+
+function lastHelp() {
+
+  return `
+last( array ) : Any
+
+  Returns the final element of an Array.
+
+  array : Array[Any] -> The array from which you want the final element.
+  `;
+}
+
+function tailHelp() {
+
+  return `
+tail( array ) : Array[Any]
+
+  Returns all of the elements of the array that follow its first element.
+
+  array: Array[Any] -> The array from which you want all of the elements following the first.
+  `;
+}
+
 function splitListHelp() {
   
   return `
@@ -12,5 +45,5 @@ splitList( sliceSize, array ) : Array
   `;
 }
 
-export { splitListHelp };
+export { headHelp, lastHelp, splitListHelp, tailHelp };
 

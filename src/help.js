@@ -1,31 +1,28 @@
-import { IllegalArgumentHelp, IllegalOperationHelp } from "./error/help";
-import { whenHelp } from "./logic/help";
-import {
-  isAtomicStringHelp,
-  isNonEmptyStringHelp,
-  isNullHelp,
-  isPrimitiveHelp,
-  quacksLikeHelp,
-  randomIntHelp,
-  rangeHelp,
-  uuidHelp
-} from "./value/help";
+import * as CollectionHelp from "./collection/help";
+import * as ErrorHelp from "./error/help";
+import * as LogicHelp from "./logic/help";
+import * as ValueHelp from "./value/help";
+
 import * as Error from "./Error";
 import * as Logic from "./Logic";
 import * as Value from "./Value";
 
 const helpMapping = {
-  IllegalArgument: IllegalArgumentHelp(),
-  IllegalOperation: IllegalOperationHelp(),
-  when: whenHelp(),
-  isAtomicString: isAtomicStringHelp(),
-  isNonEmptyString: isNonEmptyStringHelp(),
-  isNull: isNullHelp(),
-  isPrimitive: isPrimitiveHelp(),
-  quacksLike: quacksLikeHelp(),
-  randomInt: randomIntHelp(),
-  range: rangeHelp(),
-  uuid: uuidHelp()
+  head: CollectionHelp.headHelp(),
+  last: CollectionHelp.lastHelp(),
+  splitList: CollectionHelp.splitListHelp(),
+  tail: CollectionHelp.tailHelp(),
+  IllegalArgument: ErrorHelp.IllegalArgumentHelp(),
+  IllegalOperation: ErrorHelp.IllegalOperationHelp(),
+  when: LogicHelp.whenHelp(),
+  isAtomicString: ValueHelp.isAtomicStringHelp(),
+  isNonEmptyString: ValueHelp.isNonEmptyStringHelp(),
+  isNull: ValueHelp.isNullHelp(),
+  isPrimitive: ValueHelp.isPrimitiveHelp(),
+  quacksLike: ValueHelp.quacksLikeHelp(),
+  randomInt: ValueHelp.randomIntHelp(),
+  range: ValueHelp.rangeHelp(),
+  uuid: ValueHelp.uuidHelp()
 };
 
 function generalHelp() {

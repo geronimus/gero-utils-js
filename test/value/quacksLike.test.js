@@ -188,7 +188,7 @@ describe( "quacksLike( subject, duck )", () => {
 
   it( "has a help text", () => {
     
-    assert( /quacksLike/.test( quacksLikeHelp() ) );
+    assert.isTrue( /quacksLike/.test( quacksLikeHelp() ) );
   });
 });
 

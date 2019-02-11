@@ -39,3 +39,5 @@ function splitList( sliceSize, array ) {
 
 export { splitList };
 
+export * from "./collection/list";
+
