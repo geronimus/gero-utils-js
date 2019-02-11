@@ -19,10 +19,20 @@
     "url": "git+https://github.com/geronimus/gero-utils-js.git"
   },
   "keywords": [
+    "head",
     "IllegalArgument",
     "IllegalOperation",
+    "isAtomicString",
+    "isNonEmptyString",
     "isNull",
-    "when"
+    "isPrimitive",
+    "last",
+    "quacksLike",
+    "range",
+    "randomInt",
+    "splitList",
+    "tail",
+    "uuid"
   ],
   "author": "Graham Brown (Geronimus)",
   "license": "BSD-2-Clause",
