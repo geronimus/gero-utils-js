@@ -34,6 +34,43 @@ isNull( value ) : boolean
   `;
 }
 
+function isPrimitiveHelp() {
+
+  return `
+isPrimitive( value ) : boolean
+
+  Determines whether the passed-in value is one of JavaScript's primitive types. ( "boolean", "number", "string", "undefined", "null" )
+
+  Otherwise, presume it is a complex type. (eg, An "object" or "function". )
+
+  value : Any -> The value whose type you want to know.
+`;
+}
+
+function quacksLikeHelp() {
+
+  return `
+quacksLike( subject, duck ) : object
+
+  (As in "duck typing".) Determines whether the "subject" is an object like the "duck", by examining their properties.
+
+  It doesn't examine the "duck's" property values, so it can be a real object, or just an interface definition.
+
+  Returns a result object that reports on the matched and unmatched properties. eg:
+
+    {
+      result: false,
+      matchedProperties: [ "beak", "feathers" ],
+      unmatchedProperties: [ "quack", "webbedFeet" ]
+      subjectDataType: "object",
+      duckDataType: "object"
+    }
+
+  subject : Any -> The value to test as having the same properties as the "duck".
+  duck : Any -> An object whose property names you expect the subject to have. If you pass in a primitive value, the function will verify that the subject is of the same primitive type.
+  `;
+}
+
 function randomIntHelp() {
 
   return `
@@ -86,6 +123,8 @@ export {
   isAtomicStringHelp,
   isNonEmptyStringHelp,
   isNullHelp,
+  isPrimitiveHelp,
+  quacksLikeHelp,
   randomIntHelp,
   rangeHelp,
   uuidHelp

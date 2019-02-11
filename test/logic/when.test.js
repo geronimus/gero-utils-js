@@ -4,7 +4,7 @@ import { whenHelp } from "../../src/logic/help";
 
 const illegalArg = /Illegal argument:/;
 
-describe( "Logic.when( condition, operation )", () => {
+describe( "Logic.when( condition, operation, [ ... ], elseOp )", () => {
 
   it( "when you pass it an invalid (non-boolean) condition, it throws an IllegalArgument exception", () => {
     
@@ -46,6 +46,22 @@ describe( "Logic.when( condition, operation )", () => {
       return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
     }
   });
+
+  /*it( "you can pass multiple condition-op pairs, and it executes the correct one, and returns its value", () => {
+  
+    const argSets = {
+      1: [ true, () => 1, false, () => 2, false, () => 3 ],
+      2: [ false, () => 1, true, () => 2, false, () => 3 ],
+      3: [ false, () => 1, false, () => 2, true, () => 3 ]
+    };
+
+    Object.getOwnPropertyNames( argSets ).forEach(
+      key => {
+        const args = argSets[ key ];
+        assert.strictEqual( when( ...args ), Number.parseInt( key ) );  
+      }
+    );
+  });*/
 
   it( "has a help text", () => {
   

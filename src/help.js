@@ -4,6 +4,8 @@ import {
   isAtomicStringHelp,
   isNonEmptyStringHelp,
   isNullHelp,
+  isPrimitiveHelp,
+  quacksLikeHelp,
   randomIntHelp,
   rangeHelp,
   uuidHelp
@@ -19,6 +21,8 @@ const helpMapping = {
   isAtomicString: isAtomicStringHelp(),
   isNonEmptyString: isNonEmptyStringHelp(),
   isNull: isNullHelp(),
+  isPrimitive: isPrimitiveHelp(),
+  quacksLike: quacksLikeHelp(),
   randomInt: randomIntHelp(),
   range: rangeHelp(),
   uuid: uuidHelp()
