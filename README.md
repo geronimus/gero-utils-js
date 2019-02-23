@@ -44,13 +44,6 @@ import Utils from "@geronimus/utils";
 Utils.IllegalArgument( "myParam", "A valid value", myParam );
 ```
   
-
-To show help for a specific function, call help like this:
-
-```javascript
-Utils.help( "IllegalArgument" );
-```
-  
 # API
 
 ## Collection
