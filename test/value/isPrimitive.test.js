@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { isPrimitive } from "../../src/Value";
-import { isPrimitiveHelp } from "../../src/value/help";
 
 describe( "Value.isPrimitive( value )", () => {
 
@@ -38,11 +37,6 @@ describe( "Value.isPrimitive( value )", () => {
         assert.isFalse( isPrimitive( item ) );  
       }
     );
-  });
-
-  it( "has a help text", () => {
-    
-    assert( /isPrimitive/.test( isPrimitiveHelp() ) );
   });
 });
 

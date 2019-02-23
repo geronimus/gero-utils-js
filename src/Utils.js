@@ -10,12 +10,6 @@ import {
   range,
   uuid
 } from "./Value";
-import { getHelpItemText, listFunctions } from "./help";  
-
-function help( withWhat ) {
-
-  return getHelpItemText( withWhat );
-}
 
 export default { 
   head,
@@ -31,10 +25,9 @@ export default {
   quacksLike,
   randomInt,
   range,
-  uuid,
-  help,
-  listFunctions
+  uuid
 };
+
 export {  
   head,
   last,
@@ -49,8 +42,6 @@ export {
   quacksLike,
   randomInt,
   range,
-  uuid,
-  help,
-  listFunctions
+  uuid
 };
 

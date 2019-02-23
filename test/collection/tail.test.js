@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { tail } from "../../src/Collection";
-import { tailHelp } from "../../src/collection/help";
 import { range } from "../../src/Value";
 
 describe( "Collection.tail( array )", () => {
@@ -31,11 +30,6 @@ describe( "Collection.tail( array )", () => {
     assert.deepEqual( tail( [ 1, 2, 3 ] ), [ 2, 3 ] );
     assert.deepEqual( tail( [ 1, 2, 3, 4, 5 ] ), [ 2, 3, 4, 5 ] );
     assert.deepEqual( tail( range( 100 ) ), range( 2, 100 ) );
-  });
-
-  it( "has a help function", () => {
-    
-    assert.isTrue( /tail/.test( tailHelp() ) );
   });
 });
 

@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { IllegalOperation } from "../../src/Error";
-import { IllegalOperationHelp } from "../../src/error/help";
 
 const illegalOpPattern = /Illegal operation:/;
 
@@ -38,11 +37,6 @@ describe( "Error.IllegalOperation", () => {
       },
       illegalOpPattern
     );  
-  });
-
-  it( "has a help text", () => {
-    
-    assert( /IllegalOperation/.test( IllegalOperationHelp() ) );
   });
 });
 

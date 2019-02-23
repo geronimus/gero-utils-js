@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { isNonEmptyString } from "../../src/Value";
-import { isNonEmptyStringHelp } from "../../src/value/help";
 
 describe( "Value.isNonEmptyString( value )", () => {
 
@@ -39,11 +38,6 @@ describe( "Value.isNonEmptyString( value )", () => {
         assert.isFalse( isNonEmptyString( item ) );  
       }
     );
-  });
-  
-  it( "has a help text", () => {
-    
-    assert( /isNonEmptyString/.test( isNonEmptyStringHelp() ) );
   });
 });
 

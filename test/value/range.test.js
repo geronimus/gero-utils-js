@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { range } from "../../src/Value";
-import { rangeHelp } from "../../src/value/help";
 
 const nonNumericArgs = [
   { lower: undefined, upper: undefined },
@@ -64,11 +63,6 @@ describe( "Value.range( lowerBound, upperBound )", () => {
 
     assert.strictEqual( range( lBound, uBound ).length, 3 );
     assert.deepEqual( range( lBound, uBound ), [ 3, 4, 5 ] );
-  });
-
-  it( "has a help text", () => {
-    
-    assert( /range/.test( rangeHelp() ) );
   });
 });
 

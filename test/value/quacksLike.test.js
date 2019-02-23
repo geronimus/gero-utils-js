@@ -1,8 +1,7 @@
 import { assert } from "chai";
 import { quacksLike } from "../../src/Value";
-import { quacksLikeHelp } from "../../src/value/help";
 
-describe( "quacksLike( subject, duck )", () => {
+describe( "Value.quacksLike( subject, duck )", () => {
 
   it( "throws an exception if the arguments are missing or null", () => {
   
@@ -184,11 +183,6 @@ describe( "quacksLike( subject, duck )", () => {
         duckDataType: typeof duckInterface
       }
     );
-  });
-
-  it( "has a help text", () => {
-    
-    assert.isTrue( /quacksLike/.test( quacksLikeHelp() ) );
   });
 });
 

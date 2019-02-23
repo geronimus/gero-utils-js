@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { isAtomicString } from "../../src/Value";
-import { isAtomicStringHelp } from "../../src/value/help";
 
 describe( "Value.isAtomicString( value )", () => {
 
@@ -41,11 +40,6 @@ describe( "Value.isAtomicString( value )", () => {
         assert.isFalse( isAtomicString( item ) );  
       }
     );
-  });
-  
-  it( "has a help text", () => {
-    
-    assert( /isAtomicString/.test( isAtomicStringHelp() ) );
   });
 });
 

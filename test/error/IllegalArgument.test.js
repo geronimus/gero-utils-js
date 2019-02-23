@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { IllegalArgument } from "../../src/Error";
-import { IllegalArgumentHelp } from "../../src/error/help";
 
 const illegalArgPattern = /Illegal argument:/;
 
@@ -36,11 +35,6 @@ describe( "Error.IllegalArgument", () => {
       },
       illegalArgPattern
     );
-  });
-
-  it( "has a help text", () => {
-      
-    assert( /IllegalArgument/.test( IllegalArgumentHelp() ) );
   });
 });
 

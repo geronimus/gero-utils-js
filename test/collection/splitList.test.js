@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { splitList } from "../../src/Collection";
-import { splitListHelp } from "../../src/collection/help";
 import { range } from "../../src/Value";
 
 describe( "Collection.splitList( sliceSize, array )", () => {
@@ -56,11 +55,6 @@ describe( "Collection.splitList( sliceSize, array )", () => {
   it( "given an array not divisible by sliceSize, returns groups of sliceSize, followed by a final, shorter group", () => {
   
     assert.deepEqual( splitList( 3, range( 8 ) ), [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ] );
-  });
-
-  it( "has a help text", () => {
-      
-    assert( /splitList/.test( splitListHelp() ) );
   });
 });
 

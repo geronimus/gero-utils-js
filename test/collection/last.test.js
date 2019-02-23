@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { last } from "../../src/Collection";
-import { lastHelp } from "../../src/collection/help";
 import { range } from "../../src/Value";
 
 describe( "Collection.last( array )", () => {
@@ -31,11 +30,6 @@ describe( "Collection.last( array )", () => {
     assert.deepEqual( last( [ 1, 2, 3 ] ), 3 );
     assert.deepEqual( last( [ 1, 2, 3, 4, 5 ] ), 5 );
     assert.deepEqual( last( range( 100 ) ), 100 );
-  });
-
-  it( "has a help function", () => {
-    
-    assert.isTrue( /last/.test( lastHelp() ) );
   });
 });
 

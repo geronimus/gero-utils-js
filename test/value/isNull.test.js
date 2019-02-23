@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { isNull } from "../../src/Value";
-import { isNullHelp } from "../../src/value/help";
 
 describe( "Value.isNull( value )", () => {
 
@@ -25,11 +24,6 @@ describe( "Value.isNull( value )", () => {
     ];
 
     nonNullValues.forEach( val => assert.isFalse( isNull( val ) ) );
-  });
-
-  it( "has a help text", () => {
-    
-    assert( /isNull/.test( isNullHelp() ) );
   });
 });
 

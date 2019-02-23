@@ -5,6 +5,7 @@ package-lock.json
 .DS_Store
 
 # VIM swap files
+*.swp
 *~
 
 # Distribution directory

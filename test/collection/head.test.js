@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { head } from "../../src/Collection";
-import { headHelp } from "../../src/collection/help";
 
 describe( "Collection.head( array )", () => {
   
@@ -25,11 +24,6 @@ describe( "Collection.head( array )", () => {
     assert.strictEqual( 1, head( [ 1 ] ) );
     assert.strictEqual( 1, head( [ 1, 2, 3 ] ) );
     assert.strictEqual( 0, head( head( [ [ 0, 1 ], 2, 3 ] ) ) );
-  });
-
-  it( "has a help function", () => {
-    
-    assert.isTrue( /head/.test( headHelp() ) );
   });
 });
 

@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { randomInt, range } from "../../src/Value";
-import { randomIntHelp } from "../../src/value/help";
 
 describe( "Value.randomInt( lowerBound, upperBound )", () => {
 
@@ -76,11 +75,6 @@ describe( "Value.randomInt( lowerBound, upperBound )", () => {
 
       return results;
     }
-  });
-  
-  it( "has a help text", () => {
-    
-    assert( /randomInt/.test( randomIntHelp() ) );
   });
 });
 

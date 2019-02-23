@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { range, uuid } from "../../src/Value";
-import { uuidHelp } from "../../src/value/help";
 
 describe( "Value.uuid()", () => {
 
@@ -24,11 +23,6 @@ describe( "Value.uuid()", () => {
         },
         {}
       );
-  });
-
-  it( "has a help text", () => {
-    
-    assert( /uuid/.test( uuidHelp() ) );
   });
 });
 
