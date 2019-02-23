@@ -1,7 +1,17 @@
-function success( result ) {
+function failure() {
 
-  return { status: "success", result };
+  return Object.freeze( { status: "failure" } );
 }
 
-export { success };
+function success( result ) {
+
+  const resultTemplate = { status: "success" };
+
+  if ( arguments.length > 0 )
+    resultTemplate.result = result;
+
+  return Object.freeze( resultTemplate );
+}
+
+export { failure, success };
 

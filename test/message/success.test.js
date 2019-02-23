@@ -23,7 +23,7 @@ describe( "Message.success( result )", () => {
 
   it( "can return no result", () => {
   
-    assert.deepEqual( success(), successTemplate( undefined ) );
+    assert.deepEqual( success(), { status: "success" } );
   });
 
   it( "returns any type of result", () => {
