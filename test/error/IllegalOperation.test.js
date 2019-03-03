@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { IllegalOperation } from "../../src/Error";
 
-const illegalOpPattern = /Illegal operation:/;
+const illegalOpPattern = /Illegal operation/;
 
 describe( "Error.IllegalOperation", () => {
 
