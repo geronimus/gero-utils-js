@@ -6,17 +6,27 @@ Geronimus Utilities for JavaScript (gero-utils.js) are functions I find myself r
 
 The collection is expected to grow over time.
 
-## Collection
+## Collection Functions
+### They operate on Arrays.
 - head
 - last
 - splitList
 - tail
 
 ## Error Functions
+### They throw predictably-formatted and informative errors.
 - IllegalArgument
 - IllegalOperation
 
+## Message Functions
+### Intended for use in event-based systems, these functions create informative result objects, rather than disrupt execution with errors.
+- failure
+- illegalArgFailure
+- illegalOpFailure
+- success
+
 ## Value Functions
+### They test or produce values of different types.
 - isAtomicString
 - isNonEmptyString
 - isNull
@@ -96,6 +106,54 @@ The first words of the error message will always be: "Illegal operation" (For th
 - __methodCalled : string__ The name of the illegal method, as fully-scoped as possible.
 - __rule : string__ A description of when this method is allowed or not allowed.
 - __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
+
+## Message
+
+### failure( error ) : object
+
+Creates a failure object, which you can return when a computation fails, instead of an exception.
+
+This is a generic failure, that allows you to provide any clue you wish. The returned object looks like this:
+
+```javascript
+{
+  status: "failure",
+  message: "The error message you provide, or else none at all"
+}
+```
+
+- __error : string | Error__ A message that reports what went wrong. Accepts error objects and uses their messages, so that you can intercept caught Errors and return their messages on failures.
+
+### illegalArgFailure( param, expected, actual ) : object
+
+Creates a failure object (see _failure_) that reports an illegal argument in its message.
+
+- __param : string__ The name of the parameter where the illegal value was encountered.
+- __expected : string__ A description of the allowed values.
+- __actual : string__ A description or representation of the value encountered.
+
+### illegalOpFailure( methodCalled, rule, whatYouDidWrong ) : object
+
+Creates a failure object (see _failure_) that reports an illegal operation in its message.
+
+- __methodCalled : string__ The name of the illegal method, as fully-scoped as possible.
+- __rule : string__ A description of when this method is allowed or not allowed.
+- __whatYouDidWrong : string__ A drescription of how the current state of the system violated the rule.
+
+### success( result ) : object
+
+Creates a success object, which you can return when a computation or command succeeds, instead of a raw value, or void (nothing).
+
+You can optionally provide a result. Otherwise it just reports success. The returned object looks like this:
+
+```javascript
+{
+  status: "success",
+  result: "The result you provide. (Of any type at all.)"
+}
+
+- __result : Any__ Any type of result you want to communicate. If you do not provide this, then the message will simply report success, without the result property.
+```
 
 ## Value
 
