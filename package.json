@@ -20,8 +20,11 @@
   },
   "keywords": [
     "head",
+    "failure",
     "IllegalArgument",
     "IllegalOperation",
+    "illegalArgFailure",
+    "illegalOpFailure",
     "isAtomicString",
     "isNonEmptyString",
     "isNull",
@@ -31,6 +34,7 @@
     "range",
     "randomInt",
     "splitList",
+    "success",
     "tail",
     "uuid"
   ],
