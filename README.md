@@ -7,26 +7,26 @@ Geronimus Utilities for JavaScript (gero-utils.js) are functions I find myself r
 The collection is expected to grow over time.
 
 ## Collection Functions
-### They operate on Arrays.
+#### They operate on Arrays.
 - head
 - last
 - splitList
 - tail
 
 ## Error Functions
-### They throw predictably-formatted and informative errors.
+#### They throw predictably-formatted and informative errors.
 - IllegalArgument
 - IllegalOperation
 
 ## Message Functions
-### Intended for use in event-based systems, these functions create informative result objects, rather than disrupt execution with errors.
+#### Intended for use in event-based systems, these functions create informative result objects, rather than disrupt execution with errors.
 - failure
 - illegalArgFailure
 - illegalOpFailure
 - success
 
 ## Value Functions
-### They test or produce values of different types.
+#### They test or produce values of different types.
 - isAtomicString
 - isNonEmptyString
 - isNull
