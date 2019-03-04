@@ -118,11 +118,11 @@ This is a generic failure, that allows you to provide any clue you wish. The ret
 ```javascript
 {
   status: "failure",
-  message: "The error message you provide, or else none at all"
+  message: "The error message you provide, or else none at all."
 }
 ```
 
-- __error : string | Error__ A message that reports what went wrong. Accepts error objects and uses their messages, so that you can intercept caught Errors and return their messages on failures.
+- __error : string | Error__ A message that reports what went wrong. Accepts either strings or Error objects, allowing you to catch Errors and return them as failure messages, without much bother.
 
 ### illegalArgFailure( param, expected, actual ) : object
 
@@ -151,9 +151,8 @@ You can optionally provide a result. Otherwise it just reports success. The retu
   status: "success",
   result: "The result you provide. (Of any type at all.)"
 }
-
-- __result : Any__ Any type of result you want to communicate. If you do not provide this, then the message will simply report success, without the result property.
 ```
+- __result : Any__ Any type of result you want to communicate. If you do not provide this, then the message will simply report success, without the result property.
 
 ## Value
 
