@@ -6,6 +6,7 @@ describe( "Message.failure.illegalArg( param, expected, actual )", () => {
   it( "if you provide no argument, it simply reports: Illegal argument", () => {
   
     assert.strictEqual( illegalArg(), "Illegal argument" );
+    assert.strictEqual( illegalArg( undefined, undefined, undefined ), "Illegal argument" );
   });
 
   it( "if you only provide a valid param, it reports: Illegal argument: ${ param }", () => {
@@ -26,6 +27,10 @@ describe( "Message.failure.illegalArg( param, expected, actual )", () => {
     assert.strictEqual(
       illegalArg( "first", "anything", null ),
       "Illegal argument: first\n  expected: anything\n  actual: null"
+    );
+    assert.strictEqual(
+      illegalArg( "mustBeUndefined", undefined, null ),
+      "Illegal argument: mustBeUndefined\n  expected: undefined\n  actual: null"
     );
   });
 });

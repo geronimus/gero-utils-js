@@ -1,21 +1,19 @@
-import { isNull } from "../Value";
+import { failure } from "../Message";
+import { illegalArg, illegalOp } from "./failure/text";
 
-function illegalArg( param, expected, actual ) {
-
-  if ( arguments.length === 0 || typeof param !== "string" )
-    return "Illegal argument";
-
-  if ( arguments.length === 1 || isNull( expected ) )
-    return `Illegal argument: ${ param }`;
-
-  if ( arguments.length === 2 )
-    return `Illegal argument: ${ param }\n` +
-      `  expected: ${ expected }`;
-
-  return `Illegal argument: ${ param }\n` +
-    `  expected: ${ expected }\n` +
-    `  actual: ${ actual }`;
+function illegalArgFailure( param, expected, actual ) {
+  
+  return failure(
+    illegalArg( param, expected, actual )
+  );
 }
 
-export { illegalArg };
+function illegalOpFailure( methodCalled, rule, whatYouDidWrong ) {
+
+  return failure(
+    illegalOp( methodCalled, rule, whatYouDidWrong )
+  );
+}
+
+export { illegalArgFailure, illegalOpFailure };
 

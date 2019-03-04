@@ -31,6 +31,10 @@ function illegalOp( methodCalled, rule, whatYouDidWrong ) {
 }
 
 /**
+ * Returns any unbroken sequence of valid arguments found in the arguments object.
+ * If we find any invalid argument, we return only the already-valid arguments and
+ * don not evaluate the rest of the sequence.
+ *
  * @param {Object} argsObj The arguments object provided by a function.
  * @param {function[]} validatorFuncs An array of functions, taking one argument and
  *   returning a boolean, intended to validate each expected argument.
@@ -39,9 +43,19 @@ function illegalOp( methodCalled, rule, whatYouDidWrong ) {
  */
 function getValidArgs( argsObj, validatorFuncs ) {
 
-  return Array.from( argsObj ).filter(
-    ( arg, index ) => validatorFuncs[ index ]( arg )
-  );
+  const result = [];
+  let index = 0;
+
+  while ( index < argsObj.length ) {
+    if ( validatorFuncs[ index ]( argsObj[ index ] ) ) {
+      result.push( argsObj[ index ] );  
+    } else {
+      return result;  
+    }
+    index += 1;
+  }
+
+  return result;
 }
 
 // These two functions are argument validators.

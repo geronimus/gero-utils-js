@@ -1,6 +1,19 @@
-function failure() {
+function failure( error ) {
 
-  return Object.freeze( { status: "failure" } );
+  const failureObject = { status: "failure" };
+
+  return Object.freeze( addMessage( error, failureObject ) );
+
+  function addMessage( errorOrText, failureObj ) {
+  
+    if ( typeof errorOrText === "string" ) {
+      failureObj.message = errorOrText;
+    } else if ( errorOrText instanceof Error ) {
+      failureObj.message = errorOrText.message;
+    }
+
+    return failureObj;
+  }
 }
 
 function success( result ) {
@@ -14,4 +27,5 @@ function success( result ) {
 }
 
 export { failure, success };
+export { illegalArgFailure, illegalOpFailure } from "./Message/failure";
 
